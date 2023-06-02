@@ -117,8 +117,7 @@
   /*#endregion ---UTILITIES---*/
 
   /*#region --HEADER--*/
-  .header {
-  }
+  .header {}
 
   .header__wrapper {
     display: flex;
@@ -127,27 +126,62 @@
 
   .header__logo {
     flex-grow: 2;
+
+    @media (min-width:768px) {
+      flex-grow: 0;
+    }
   }
 
-  .heder__logo-img {
-  }
+  .heder__logo-img {}
 
   .header__navigation {
     display: none;
+
+    @media (min-width:768px) {
+      display: block;
+      margin: 0 auto;
+    }
+
+    @media (min-width:1400px) {
+      display: block;
+      margin: 0 137px 0 auto;
+    }
+
   }
 
   .header__navigation-list {
+    display: flex;
+    gap: 16px;
+
+    @media (min-width: 1400px) {
+      gap: 32px;
+    }
   }
 
   .header__navigation-item {
+    line-height: 1.25;
+
   }
 
   .header__navigation-link {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.25;
+    transition: color 250ms ease;
+
+    @media (min-width:1400px) {
+      font-size: 16px;
+    }
+  }
+
+  .header__navigation-link:hover,
+  .header__navigation-link:focus {
+    color: #f96739;
   }
 
   .header__phone {
     display: none;
-    
+
 
     @media (min-width:425px) {
       display: flex;
@@ -156,9 +190,10 @@
       padding: 8px;
       border: 1px #000000 solid;
       border-radius: 18px;
-      transition: all 3s ease;
+      transition: all 250ms ease;
     }
   }
+
 
   .header__phone:hover,
   .header__phone:focus {
@@ -168,21 +203,6 @@
   .header__phone-icon {
     fill: currentColor;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -225,9 +245,14 @@
   }
 
 
+
   /* Стили мобильного меню */
   /* Гамбургер иконка */
-  .mobile-menu {}
+  .mobile-menu {
+    @media (min-width:768px) {
+      display: none;
+    }
+  }
 
   .menu-btn {
     width: 30px;
@@ -279,8 +304,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 15px;
-    background: var(--default-button);
+    padding: 20px;
+    background: #f8ba3b;
     transform: translateX(-100%);
     transition: transform 0.5s;
   }
@@ -288,8 +313,22 @@
   .menu.active {
     transform: translateX(0);
   }
+
+  .menu-mobile__navigation {
+  }
+
+  .menu-mobile__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .menu-mobile__item {
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .menu-mobile__link {
+  }
+
   /*#endregion ---HEADER---*/
-
-
-
-
