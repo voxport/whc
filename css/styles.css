@@ -1,0 +1,295 @@
+  /*#region --BASE-RESET--*/
+  html {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+  }
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
+
+  /* Стили для обнуления верхних отступов у элементов */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  /* Класс для обнуления базовых свойств у списков (ul) */
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  /* Класс для обнуления базовых свойств у ссылок */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Свойства для корректного отображения картинок */
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Свойства для обнуления курсива у address */
+
+  address {
+    font-style: normal;
+  }
+
+  /*#endregion ---BASE-RESET---*/
+
+  /*#region --UTILITIES--*/
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (min-width:1200px) {
+      padding-top: 136px;
+      padding-bottom: 136px;
+    }
+  }
+
+  .container {
+    max-width: 428px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    /* border: 1px red solid; */
+
+    @media (min-width: 768px) {
+      /* border: 1px yellow solid; */
+      max-width: 768px;
+    }
+
+    @media (min-width: 1400px) {
+      max-width: 1380px;
+      padding-left: 30px;
+      padding-right: 30px;
+      /* border: 1px blue solid; */
+    }
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .current {
+    color: var(--color-404bbf);
+  }
+
+  .current::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--color-404bbf);
+    position: absolute;
+    bottom: -4px;
+  }
+
+  /*#endregion ---UTILITIES---*/
+
+  /*#region --HEADER--*/
+  .header {
+  }
+
+  .header__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__logo {
+    flex-grow: 2;
+  }
+
+  .heder__logo-img {
+  }
+
+  .header__navigation {
+    display: none;
+  }
+
+  .header__navigation-list {
+  }
+
+  .header__navigation-item {
+  }
+
+  .header__navigation-link {
+  }
+
+  .header__phone {
+    display: none;
+    
+
+    @media (min-width:425px) {
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+      padding: 8px;
+      border: 1px #000000 solid;
+      border-radius: 18px;
+      transition: all 3s ease;
+    }
+  }
+
+  .header__phone:hover,
+  .header__phone:focus {
+    color: #f96739;
+  }
+
+  .header__phone-icon {
+    fill: currentColor;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Стили кнопки смены языка страницы */
+  .language-change {
+    position: relative;
+    display: inline-block;
+    margin-right: 16px;
+  }
+
+  .language-change__main {
+    padding: 10px;
+    background-color: #f0f0f0;
+    /* border: 1px #000000 solid; */
+    border-radius: 18px;
+    cursor: pointer;
+  }
+
+  .language-change__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .language-change__dropdown li {
+    padding: 10px;
+  }
+
+  .language-change__dropdown li a {
+    font-weight: 500;
+  }
+
+  .language-change:hover .language-change__dropdown {
+    max-height: 200px;
+  }
+
+
+  /* Стили мобильного меню */
+  /* Гамбургер иконка */
+  .mobile-menu {}
+
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+  }
+
+  .menu-btn span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    transition: 0.5s;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
+  /* Меняем гамбургер иконку, когда меню открыто */
+  .menu-btn.active span:nth-of-type(1) {
+    display: none;
+  }
+
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+
+  /* Меню, которое будет появляться */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background: var(--default-button);
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+  /*#endregion ---HEADER---*/
+
+
+
+

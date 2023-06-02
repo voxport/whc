@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto+Mono:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>HardCode Programming</title>
+    <meta name="description" content="Независимо от уровня подготовки - от начинающего до опытного программиста - предлагаем индивидуальные занятия, 
+        адаптированные под ваши потребности и уровень сложности">
+
+</head>
+
+<body>
+    <header class="header"></header>
+    <div class="header__wrapper container">
+        <!-- Логотип -->
+        <a href="./index.html" class="header__logo">
+            <img src="./images/logotype.svg" alt="web hard code logotype" class="heder__logo-img" width="64"
+                height="64">
+        </a>
+
+        <!-- Меню навигации -->
+        <nav class="header__navigation">
+            <ul class="header__navigation-list">
+                <li class="header__navigation-item">
+                    <a href="./index.html" class="header__navigation-link">Главная</a>
+                </li>
+
+                <li class="header__navigation-item">
+                    <a href="#" class="header__navigation-link">О нас</a>
+                </li>
+
+                <li class="header__navigation-item">
+                    <a href="#" class="header__navigation-link">Программа</a>
+                </li>
+
+                <li class="header__navigation-item">
+                    <a href="#" class="header__navigation-link">Учителя</a>
+                </li>
+
+                <li class="header__navigation-item">
+                    <a href="#" class="header__navigation-link">Отзывы</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Ссылка контактов -->
+        <a href="tel:+380631457898" class="header__phone">
+            <svg class="header__phone-icon" width="24" height="24">
+                <use href="./images/symbols.svg#icon-telephone"></use>
+            </svg>
+            +38 063 145 78 98
+        </a>
+
+        <!-- Смена языка страницы -->
+        <div class="language-change">
+            <div class="language-change__main">
+                РУС
+                <span class="language-change__arrow">&#9662;</span>
+            </div>
+            <ul class="language-change__dropdown">
+                <li><a href="./index.html">РУС</a></li>
+                <li><a href="./index.html">УКР</a></li>
+            </ul>
+        </div>
+
+        <!-- Мобильное меню -->
+        <div class="mobile-menu">
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Программа</a></li>
+                        <li><a href="#">Учителя</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main></main>
+
+
+    <footer class="footer"></footer>
+
+    <script src="./js/mobile-menu.js" type="module"></script>
+</body>
+
+</html>
