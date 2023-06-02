@@ -23,82 +23,139 @@
 </head>
 
 <body>
-    <header class="header"></header>
-    <div class="header__wrapper container">
-        <!-- Логотип -->
-        <a href="./index.html" class="header__logo">
-            <img src="./images/logotype.svg" alt="web hard code logotype" class="heder__logo-img" width="64"
-                height="64">
-        </a>
+    <header class="header">
+        <div class="header__wrapper container">
+            <!-- Логотип -->
+            <a href="./index.html" class="header__logo">
+                <img src="./images/logotype.svg" alt="web hard code logotype" class="heder__logo-img" width="64"
+                    height="64">
+            </a>
 
-        <!-- Меню навигации -->
-        <nav class="header__navigation">
-            <ul class="header__navigation-list">
-                <li class="header__navigation-item">
-                    <a href="./index.html" class="header__navigation-link current">Главная</a>
-                </li>
+            <!-- Меню навигации -->
+            <nav class="header__navigation">
+                <ul class="header__navigation-list">
+                    <li class="header__navigation-item">
+                        <a href="./index.html" class="header__navigation-link current">Главная</a>
+                    </li>
 
-                <li class="header__navigation-item">
-                    <a href="#" class="header__navigation-link">О нас</a>
-                </li>
+                    <li class="header__navigation-item">
+                        <a href="#" class="header__navigation-link">О нас</a>
+                    </li>
 
-                <li class="header__navigation-item">
-                    <a href="#" class="header__navigation-link">Программа</a>
-                </li>
+                    <li class="header__navigation-item">
+                        <a href="#" class="header__navigation-link">Программа</a>
+                    </li>
 
-                <li class="header__navigation-item">
-                    <a href="#" class="header__navigation-link">Учителя</a>
-                </li>
+                    <li class="header__navigation-item">
+                        <a href="#" class="header__navigation-link">Учителя</a>
+                    </li>
 
-                <li class="header__navigation-item">
-                    <a href="#" class="header__navigation-link">Отзывы</a>
-                </li>
-            </ul>
-        </nav>
+                    <li class="header__navigation-item">
+                        <a href="#" class="header__navigation-link">Отзывы</a>
+                    </li>
+                </ul>
+            </nav>
 
-        <!-- Ссылка контактов -->
-        <a href="tel:+380631457898" class="header__phone">
-            <svg class="header__phone-icon" width="24" height="24">
-                <use href="./images/symbols.svg#icon-telephone"></use>
-            </svg>
-            +38 063 145 78 98
-        </a>
+            <!-- Ссылка контактов -->
+            <a href="tel:+380631457898" class="header__phone">
+                <svg class="header__phone-icon" width="24" height="24">
+                    <use href="./images/symbols.svg#icon-telephone"></use>
+                </svg>
+                +38 063 145 78 98
+            </a>
 
-        <!-- Смена языка страницы -->
-        <div class="language-change">
-            <div class="language-change__main">
-                РУС
-                <span class="language-change__arrow">&#9662;</span>
+            <!-- Смена языка страницы -->
+            <div class="language-change">
+                <div class="language-change__main">
+                    РУС
+                    <span class="language-change__arrow">&#9662;</span>
+                </div>
+                <ul class="language-change__dropdown">
+                    <li><a href="./index.html">РУС</a></li>
+                    <li><a href="./index.html">УКР</a></li>
+                </ul>
             </div>
-            <ul class="language-change__dropdown">
-                <li><a href="./index.html">РУС</a></li>
-                <li><a href="./index.html">УКР</a></li>
-            </ul>
+
+            <!-- Мобильное меню -->
+            <div class="mobile-menu">
+                <div class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="menu">
+                    <nav class="menu-mobile__navigation">
+                        <ul class="menu-mobile__list">
+                            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Главная</a></li>
+                            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">О нас</a></li>
+                            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Программа</a></li>
+                            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Учителя</a></li>
+                            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Отзывы</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
+    </header>
 
-        <!-- Мобильное меню -->
-        <div class="mobile-menu">
-            <div class="menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+
+    <main>
+        <!-- hero section -->
+        <section class="hero section">
+            <div class="container hero__wrapper">
+                <div class="hero__text-wrapper">
+                    <p class="hero__welcome-text">Курс</p>
+                    
+                    <h1 class="hero__title"><span class="visually-hidden">Курс</span>&lt;Frontend developer&gt;</h1>
+                    
+                    <p class="hero__description">Независимо от вашего уровня подготовки - от начинающего до опытного программиста - мы 
+                        предлагаем индивидуальные занятия, которые адаптированы под ваши потребности и уровень сложности.
+                    </p>
+
+                    <p class="hero__invite-text">Первый урок бесплатно!</p>
+                    
+                    <button class="hero__invite-button"><span>Записаться на занятие</span></button>
+
+                </div>
+                <picture class="hero__hero-img">
+                    <source
+                    srcset="
+                      ./images/hero/hero-01-1200.png    1x,
+                      ./images/hero/hero-01-1200@2x.png 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+  
+                  <source
+                    srcset="
+                      ./images/hero/hero-01-768.png    1x,
+                      ./images/hero/hero-01-768@2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+  
+                  <source
+                    srcset="
+                      ./images/hero/hero-01-320.png    1x,
+                      ./images/hero/hero-01-320@2x.png 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    class="hero__hero-im"
+                    src="./images/hero/hero-01-320.png"
+                    alt="hero img"
+                    loading="lazy"
+                  />
+                </picture>
             </div>
 
-            <div class="menu">
-                <nav class="menu-mobile__navigation">
-                    <ul class="menu-mobile__list">
-                        <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Главная</a></li>
-                        <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">О нас</a></li>
-                        <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Программа</a></li>
-                        <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Учителя</a></li>
-                        <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Отзывы</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
+            
 
-    <main></main>
+
+        </section>
+    </main>
 
 
     <footer class="footer"></footer>
