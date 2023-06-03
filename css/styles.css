@@ -556,7 +556,7 @@
     background-color: #f96739;
     background-image: url('../images/frame1.svg');
     background-repeat: repeat-x;
-    animation: ticker 35s linear infinite;
+    animation: ticker 15s linear infinite;
     
     @media (min-width:1400px) {
       animation: ticker 10s linear infinite;
@@ -578,7 +578,7 @@
     background-image: url('../images/frame2.svg');
     background-repeat: repeat-x;
     background-size: contain;
-    animation: ticker-reverse 10s linear infinite;
+    animation: ticker-reverse 3s linear infinite;
    
       @media (min-width:768px) {
         animation: ticker-reverse 15s linear infinite;
