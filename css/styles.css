@@ -535,77 +535,45 @@
 
   /*#endregion ---HERO---*/
 
-
-  .ticker__wrapper {
-    position: relative;
-
-  }
-
-
-  .ticker-1 {
-    position: absolute;
+  .marquee-infinite {
+    margin: 30px auto;
+    background-color:#f96739;
+    max-width: 100%;
+    height: 50px;
+    overflow: hidden;
     transform: rotate(3deg);
+}
+
+/*Здесь можно поиграть со свойством width: mac-content*/
+.marquee-infinite div {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: marquee-infinite 15s linear infinite;
+}
+
+.marquee-infinite span {
     width: 100%;
-    height: 100%;
-    transition: background-position 0.5s ease-out;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-around;
+}
 
-    width: 100%;
-    height: 50px;
-    overflow: hidden;
-
-    background-color: #f96739;
-    background-image: url('../images/frame1.svg');
-    background-repeat: repeat-x;
-    animation: ticker 15s linear infinite;
-    
-    @media (min-width:1400px) {
-      animation: ticker 10s linear infinite;
-    }
-  }
-
-  .ticker-2 {
-    position: absolute;
-    transform: rotate(-3deg);
-    width: 100%;
-    height: 100%;
-    transition: background-position 0.5s ease-out;
-
-    width: 100%;
-    height: 50px;
-    overflow: hidden;
-
-    background-color: #f8ba3b;
-    background-image: url('../images/frame2.svg');
-    background-repeat: repeat-x;
-    background-size: contain;
-    animation: ticker-reverse 3s linear infinite;
-   
-      @media (min-width:768px) {
-        animation: ticker-reverse 15s linear infinite;
-      }
-
-      @media (min-width:1400px) {
-        animation: ticker-reverse 25s linear infinite;
-      }
-
-  }
-
-  @keyframes ticker {
+@keyframes marquee-text {
     0% {
-      background-position: 0 0;
+        transform: translateX(100%);
     }
-
     100% {
-      background-position: 100% 0;
+        transform: translateX(-100%);
     }
-  }
+}
 
-  @keyframes ticker-reverse {
+@keyframes marquee-infinite {
     0% {
-      background-position: -100% 0;
+        transform: translateX(0%);
     }
-
     100% {
-      background-position: 0 0;
+        transform: translateX(-50%);
     }
-  }
+}
