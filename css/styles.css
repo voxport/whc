@@ -533,3 +533,59 @@
 
 
 /*#endregion ---HERO---*/
+
+.ticker-wrapper {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  transform: skewY(-10deg); /* Изменено значение угла наклона */
+}
+
+.ticker-wrapper-2 {
+  transform: skewY(10deg); /* Изменено значение угла наклона */
+}
+
+.ticker {
+  width: 100%;
+  height: 100%;
+  transition: background-position 0.5s ease-out;
+}
+
+.ticker-1 {
+  background-color: #f96739;
+  background-image: url('../images/frame1.svg');
+  background-repeat: repeat-x;
+  animation: ticker 10s linear infinite;
+}
+
+.ticker-2 {
+  background-color: #f8ba3b;
+  background-image: url('../images/frame2.svg');
+  background-repeat: repeat-x;
+  background-size: contain;
+  animation: ticker-reverse 10s linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes ticker-reverse {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+
+
