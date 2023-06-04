@@ -534,55 +534,18 @@
 
 
   /*#endregion ---HERO---*/
-
-
-  /* .ticker1__wrapper {
-    width: 100%;
-    overflow: hidden;
-    background-color:#f96739;
-    transform: rotate(3deg);
-  }
   
-  .ticker1__list {
-    display: inline-block;
-    animation: tickerAnimation 15s linear infinite;
-  }
   
-  @keyframes tickerAnimation {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  .ticker1__list {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
   
-  .ticker1__item {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    white-space: nowrap;
-    padding: 4px 4px;
-  }
+  .ticker__container {
+    position: relative;
+    height: 100px;
 
-  .ticker__text {
-    font-weight: 500;
-    letter-spacing: 2px;
   }
-
-  .ticker__img {
-    margin-right: 30px;
-  } */
-  
 
 
   .ticker1__wrapper {
+    position: absolute;
     width: 100%;
     overflow: hidden;
     background-color: #f96739;
@@ -590,6 +553,7 @@
   }
   
   .ticker2__wrapper {
+    position: absolute;
     width: 100%;
     overflow: hidden;
     background-color:#f8ba3b;
@@ -608,7 +572,7 @@
   }
   
   .ticker2__list--2 {
-    animation: tickerAnimation--2 15s linear infinite;
+    animation: tickerAnimation--2 120s linear infinite;
   }
   
   @keyframes tickerAnimation--1 {
@@ -625,13 +589,13 @@
   
   @keyframes tickerAnimation--2 {
     0% {
-      transform: translateX(0%);
+      transform: translateX(-100%);
     }
     50% {
-      transform: translateX(-50%);
+      transform: translateX(50%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(100%);
     }
   }
   
