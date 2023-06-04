@@ -427,7 +427,7 @@
     position: relative;
 
     @media (min-width:768px) {
-      width: 50%;
+      width: 40%;
     }
   }
 
@@ -443,8 +443,13 @@
     margin-bottom: 8px;
 
     @media (min-width:768px) {
+      font-size: 42px;
+    }
+
+    @media (min-width:1400px) {
       font-size: 56px;
     }
+
   }
 
   .hero__title {
@@ -456,7 +461,7 @@
     margin-bottom: 32px;
 
     @media (min-width:768px) {
-      font-size: 54px;
+      font-size: 46px;
     }
 
     @media (min-width:1400px) {
@@ -471,12 +476,21 @@
     line-height: 1.5;
     color: #1D1228;
     margin-bottom: 32px;
+
+    @media (min-width:768px) and (max-width:1399px) {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
   }
 
   .hero__invite-text {
     line-height: 1.25;
     color: #757575;
     margin-bottom: 48px;
+
+    @media (min-width:768px) and (max-width:1399px) {
+      margin-bottom: 16px;
+    }
   }
 
   .hero__hero-img {}
@@ -534,13 +548,11 @@
 
 
   /*#endregion ---HERO---*/
-  
-  
-  
+
+  /*#region --header--*/
   .ticker__container {
     position: relative;
     height: 100px;
-
   }
 
 
@@ -551,54 +563,58 @@
     background-color: #f96739;
     transform: rotate(3deg);
   }
-  
+
   .ticker2__wrapper {
     position: absolute;
     width: 100%;
     overflow: hidden;
-    background-color:#f8ba3b;
+    background-color: #f8ba3b;
     transform: rotate(-3deg);
   }
-  
+
   .ticker1__list,
   .ticker2__list {
     display: flex;
     align-items: center;
     gap: 24px;
   }
-  
+
   .ticker1__list--1 {
     animation: tickerAnimation--1 15s linear infinite;
   }
-  
+
   .ticker2__list--2 {
     animation: tickerAnimation--2 120s linear infinite;
   }
-  
+
   @keyframes tickerAnimation--1 {
     0% {
       transform: translateX(0%);
     }
+
     50% {
       transform: translateX(-50%);
     }
+
     100% {
       transform: translateX(-100%);
     }
   }
-  
+
   @keyframes tickerAnimation--2 {
     0% {
       transform: translateX(-100%);
     }
+
     50% {
       transform: translateX(50%);
     }
+
     100% {
       transform: translateX(100%);
     }
   }
-  
+
   .ticker1__item,
   .ticker2__item {
     display: flex;
@@ -607,17 +623,19 @@
     white-space: nowrap;
     padding: 4px 4px;
   }
-  
+
   .ticker1__text,
   .ticker2__text {
     font-weight: 500;
     letter-spacing: 2px;
   }
-  
+
   .ticker1__img,
   .ticker2__img {
     margin-right: 30px;
   }
 
-  
+  /*#endregion ---header---*/
+
+
 
