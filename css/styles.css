@@ -549,93 +549,83 @@
 
   /*#endregion ---HERO---*/
 
-  /*#region --header--*/
-  .ticker__container {
+  .line__wrapper {
     position: relative;
-    height: 100px;
   }
-
-
-  .ticker1__wrapper {
+  
+  .wrapper {
     position: absolute;
-    width: 100%;
-    overflow: hidden;
-    background-color: #f96739;
     transform: rotate(3deg);
+    animation: scroll 10s linear infinite;
+    background: url("../images/frame1.gif");
+    background-repeat: repeat-x;
+    background-position: 400% 0;
+    background-size: auto 50px;
+    color: #eee;
+    height: 50px;
+    min-width: 320px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    z-index: 1;
   }
 
-  .ticker2__wrapper {
+  
+  
+  @keyframes scroll {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  /* Fallback if the operating system prefers reduced motion */
+  @media (prefers-reduced-motion) {
+    .wrapper {
+      animation: none;
+      background-position: 0 0;
+    }
+  }
+
+  /* /////////////////////////////////////// */
+  .wrapper-2 {
     position: absolute;
-    width: 100%;
-    overflow: hidden;
-    background-color: #f8ba3b;
     transform: rotate(-3deg);
-  }
-
-  .ticker1__list,
-  .ticker2__list {
+    animation: scroll-2 10s linear infinite;
+    background: url("../images/frame2.gif");
+    background-repeat: repeat-x;
+    background-position: 200% 0;
+    background-size: auto 50px;
+    color: #eee;
+    height: 50px;
+    min-width: 320px;
+    width: 100vw;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 24px;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    z-index: 0;
   }
-
-  .ticker1__list--1 {
-    animation: tickerAnimation--1 15s linear infinite;
-  }
-
-  .ticker2__list--2 {
-    animation: tickerAnimation--2 120s linear infinite;
-  }
-
-  @keyframes tickerAnimation--1 {
+  
+  @keyframes scroll-2 {
     0% {
-      transform: translateX(0%);
+      background-position: 100% 0;
     }
-
-    50% {
-      transform: translateX(-50%);
-    }
-
     100% {
-      transform: translateX(-100%);
+      background-position: 0 0;
     }
   }
-
-  @keyframes tickerAnimation--2 {
-    0% {
-      transform: translateX(-100%);
-    }
-
-    50% {
-      transform: translateX(50%);
-    }
-
-    100% {
-      transform: translateX(100%);
+  
+  /* Fallback if the operating system prefers reduced motion */
+  @media (prefers-reduced-motion) {
+    .wrapper-2 {
+      animation: none;
+      background-position: 0 0;
     }
   }
-
-  .ticker1__item,
-  .ticker2__item {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    white-space: nowrap;
-    padding: 4px 4px;
-  }
-
-  .ticker1__text,
-  .ticker2__text {
-    font-weight: 500;
-    letter-spacing: 2px;
-  }
-
-  .ticker1__img,
-  .ticker2__img {
-    margin-right: 30px;
-  }
-
-  /*#endregion ---header---*/
-
-
-
