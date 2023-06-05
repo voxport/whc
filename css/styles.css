@@ -383,6 +383,15 @@
   /*#region --HERO--*/
   .hero {
     position: relative;
+    padding-bottom: 30px;
+
+    @media (min-width:768px) {
+      padding-bottom: 60px;
+    }
+
+    @media (min-width:768px) {
+      padding-bottom: 136px;
+    }
   }
 
   .hero::before {
@@ -549,41 +558,60 @@
 
   /*#endregion ---HERO---*/
 
+
+
+
+
+
   .line__wrapper {
     position: relative;
+    height: 160px;
+    
   }
-  
+
   .wrapper {
     position: absolute;
+    top: 0;
+    left: 0;
     transform: rotate(3deg);
-    animation: scroll 10s linear infinite;
+    animation: scroll 20s linear infinite;
     background: url("../images/frame1.gif");
     background-repeat: repeat-x;
     background-position: 400% 0;
-    background-size: auto 50px;
-    color: #eee;
-    height: 50px;
+    background-size: auto 35px;
+    height: 80px;
     min-width: 320px;
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     perspective: 1000px;
     perspective-origin: 50% 50%;
     z-index: 1;
   }
 
+  @media (min-width: 768px) {
+    .wrapper {
+      animation: scroll 10s linear infinite;
+    }
+  }
   
-  
+  @media (min-width: 1400px) {
+    .wrapper {
+      height: 80px;
+      background-size: auto 80px;
+      animation: scroll 20s linear infinite;
+    }
+  }
+
+
   @keyframes scroll {
     0% {
       background-position: -100% 0;
     }
+
     100% {
       background-position: 0 0;
     }
   }
-  
+
   /* Fallback if the operating system prefers reduced motion */
   @media (prefers-reduced-motion) {
     .wrapper {
@@ -592,17 +620,19 @@
     }
   }
 
+
   /* /////////////////////////////////////// */
   .wrapper-2 {
     position: absolute;
+    top: 0;
+    left: 0;
     transform: rotate(-3deg);
-    animation: scroll-2 10s linear infinite;
+    animation: scroll-2 20s linear infinite;
     background: url("../images/frame2.gif");
     background-repeat: repeat-x;
     background-position: 200% 0;
-    background-size: auto 50px;
-    color: #eee;
-    height: 50px;
+    background-size: auto 35px;
+    height: 35px;
     min-width: 320px;
     width: 100vw;
     display: flex;
@@ -612,16 +642,30 @@
     perspective-origin: 50% 50%;
     z-index: 0;
   }
-  
+  @media (min-width: 768px) {
+    .wrapper-2 {
+      animation: scroll-2 5s linear infinite;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .wrapper-2 {
+      height: 80px;
+      background-size: auto 80px;
+      animation: scroll-2 10s linear infinite;
+    }
+  }
+
   @keyframes scroll-2 {
     0% {
       background-position: 100% 0;
     }
+
     100% {
       background-position: 0 0;
     }
   }
-  
+
   /* Fallback if the operating system prefers reduced motion */
   @media (prefers-reduced-motion) {
     .wrapper-2 {
