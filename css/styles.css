@@ -502,7 +502,9 @@
     }
   }
 
-  .hero__hero-img {}
+  .hero__hero-img {
+    /* width: 100%; */
+  }
 
   .hero__invite-button {
     /* position: relative; */
@@ -561,21 +563,24 @@
  /*#region --LINE--*/
  .line__wrapper {
   position: relative;
+  width: 99%;
+
 }
 
 .wrapper {
   position: absolute;
   transform: rotate(3deg);
   animation: scroll 100s linear infinite;
-  background: url("/images/frame1.gif") #f96739;
+  background: url("../images/frame1.gif") #f96739;
   height: 40px;
-  min-width: 360px;
+  min-width: 320px;
   width: 100%;
   perspective: 1000px;
   perspective-origin: 50% 50%;
   background-size: auto 40px;
   background-repeat: repeat-x;
   z-index: 1;
+  overflow: hidden;
 }
 
 @keyframes scroll {
@@ -598,14 +603,15 @@
   position: absolute;
   transform: rotate(-3deg);
   animation: scroll-2 100s linear infinite;
-  background: url("/images/frame2.gif") #f8ba3b;
+  background: url("../images/frame2.gif") #f8ba3b;
   height: 40px;
-  min-width: 360px;
+  min-width: 320px;
   width: 100%;
   perspective: 1000px;
   perspective-origin: 50% 50%;
   background-size: auto 40px;
   background-repeat: repeat-x;
+    overflow: hidden;
 }
 
 @keyframes scroll-2 {
