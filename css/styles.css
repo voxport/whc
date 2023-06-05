@@ -563,7 +563,8 @@
  /*#region --LINE--*/
  .line__wrapper {
   position: relative;
-  width: 99%;
+  width: 99.9%;
+  margin: 0 auto;
 
 }
 
@@ -585,10 +586,10 @@
 
 @keyframes scroll {
   0% {
-    background-position: 400px 0px; /* Добавлено начальное положение анимации */
+    background-position: -400px 0px;
   }
   100% {
-    background-position: -300px 0%;
+    background-position: 300px 0%;
   }
 }
 
@@ -616,10 +617,10 @@
 
 @keyframes scroll-2 {
   0% {
-    background-position: -400px 0px; /* Добавлено начальное положение анимации */
+    background-position: 400px 0px;
   }
   100% {
-    background-position: 300px 0%;
+    background-position: -300px 0%;
   }
 }
 
