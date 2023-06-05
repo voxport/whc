@@ -585,7 +585,7 @@
 
 @keyframes scroll {
   0% {
-    background-position: 400px 0px; /* Добавлено начальное положение анимации */
+    background-position: 0px 0px; /* Добавлено начальное положение анимации */
   }
   100% {
     background-position: -8444px 0%;
@@ -616,10 +616,10 @@
 
 @keyframes scroll-2 {
   0% {
-    background-position: -400px 0px; /* Добавлено начальное положение анимации */
+    background-position: 0px 0px; /* Добавлено начальное положение анимации */
   }
   100% {
-    background-position: 2000px 0%;
+    background-position: 8432px 0%;
   }
 }
 
