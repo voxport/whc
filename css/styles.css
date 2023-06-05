@@ -557,7 +557,9 @@
 
 
   /*#endregion ---HERO---*/
-.line__wrapper {
+
+ /*#region --LINE--*/
+ .line__wrapper {
   position: relative;
 }
 
@@ -581,7 +583,7 @@
     background-position: 400px 0px; /* Добавлено начальное положение анимации */
   }
   100% {
-    background-position: -400px 0%;
+    background-position: -8444px 0%;
   }
 }
 
@@ -611,7 +613,7 @@
     background-position: -400px 0px; /* Добавлено начальное положение анимации */
   }
   100% {
-    background-position: 400px 0%;
+    background-position: 2000px 0%;
   }
 }
 
@@ -621,3 +623,11 @@
     animation: scroll-2 800s linear infinite;
   }
 }
+		/*#endregion ---LINE---*/
+
+
+
+
+
+
+ 
