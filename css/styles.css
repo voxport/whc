@@ -611,7 +611,7 @@
 
   @keyframes scroll-2 {
     0% {
-      background-position: 400px 0px;
+      background-position: 2000px 0px;
     }
 
     100% {
