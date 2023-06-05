@@ -557,119 +557,67 @@
 
 
   /*#endregion ---HERO---*/
+.line__wrapper {
+  position: relative;
+}
 
+.wrapper {
+  position: absolute;
+  transform: rotate(3deg);
+  animation: scroll 100s linear infinite;
+  background: url("../images/frame1.gif") #f96739;
+  height: 40px;
+  min-width: 360px;
+  width: 100%;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  background-size: auto 40px;
+  background-repeat: repeat-x;
+  z-index: 1;
+}
 
-
-
-
-
-  .line__wrapper {
-    position: relative;
-    height: 160px;
-    
+@keyframes scroll {
+  0% {
+    background-position: 400px 0px; /* Добавлено начальное положение анимации */
   }
+  100% {
+    background-position: -400px 0%;
+  }
+}
 
+/* Fallback if the operating system prefers reduced motion */
+@media (prefers-reduced-motion) {
   .wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(3deg);
-    animation: scroll 20s linear infinite;
-    background: url("../images/frame1.gif");
-    background-repeat: repeat-x;
-    background-position: 400% 0;
-    background-size: auto 35px;
-    height: 80px;
-    min-width: 320px;
-    width: 100vw;
-    perspective: 1000px;
-    perspective-origin: 50% 50%;
-    z-index: 1;
+    animation: scroll 800s linear infinite;
   }
+}
 
-  @media (min-width: 768px) {
-    .wrapper {
-      animation: scroll 10s linear infinite;
-    }
+.wrapper-2 {
+  position: absolute;
+  transform: rotate(-3deg);
+  animation: scroll-2 100s linear infinite;
+  background: url("../images/frame2.gif") #f8ba3b;
+  height: 40px;
+  min-width: 360px;
+  width: 100%;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  background-size: auto 40px;
+  background-repeat: repeat-x;
+}
+
+@keyframes scroll-2 {
+  0% {
+    background-position: -400px 0px; /* Добавлено начальное положение анимации */
   }
-  
-  @media (min-width: 1400px) {
-    .wrapper {
-      height: 80px;
-      background-size: auto 80px;
-      animation: scroll 20s linear infinite;
-    }
+  100% {
+    background-position: 400px 0%;
   }
+}
 
-
-  @keyframes scroll {
-    0% {
-      background-position: -100% 0;
-    }
-
-    100% {
-      background-position: 0 0;
-    }
+/* Fallback if the operating system prefers reduced motion */
+@media (prefers-reduced-motion) {
+  .wrapper {
+    animation: scroll-2 800s linear infinite;
   }
-
-  /* Fallback if the operating system prefers reduced motion */
-  @media (prefers-reduced-motion) {
-    .wrapper {
-      animation: none;
-      background-position: 0 0;
-    }
-  }
-
-
-  /* /////////////////////////////////////// */
-  .wrapper-2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(-3deg);
-    animation: scroll-2 20s linear infinite;
-    background: url("../images/frame2.gif");
-    background-repeat: repeat-x;
-    background-position: 200% 0;
-    background-size: auto 35px;
-    height: 35px;
-    min-width: 320px;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px;
-    perspective-origin: 50% 50%;
-    z-index: 0;
-  }
-  @media (min-width: 768px) {
-    .wrapper-2 {
-      animation: scroll-2 5s linear infinite;
-    }
-  }
-
-  @media (min-width: 1400px) {
-    .wrapper-2 {
-      height: 80px;
-      background-size: auto 80px;
-      animation: scroll-2 10s linear infinite;
-    }
-  }
-
-  @keyframes scroll-2 {
-    0% {
-      background-position: 100% 0;
-    }
-
-    100% {
-      background-position: 0 0;
-    }
-  }
-
-  /* Fallback if the operating system prefers reduced motion */
-  @media (prefers-reduced-motion) {
-    .wrapper-2 {
-      animation: none;
-      background-position: 0 0;
-    }
-  }
+}
