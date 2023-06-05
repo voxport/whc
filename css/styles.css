@@ -586,10 +586,10 @@
 
 @keyframes scroll {
   0% {
-    background-position: -400px 0px;
+    background-position: 400px 0px;
   }
   100% {
-    background-position: 300px 0%;
+    background-position: -300px 0%;
   }
 }
 
@@ -617,10 +617,10 @@
 
 @keyframes scroll-2 {
   0% {
-    background-position: 400px 0px;
+    background-position: -400px 0px;
   }
   100% {
-    background-position: -300px 0%;
+    background-position: 300px 0%;
   }
 }
 
