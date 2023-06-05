@@ -560,81 +560,62 @@
 
   /*#endregion ---HERO---*/
 
- /*#region --LINE--*/
- .line__wrapper {
-  position: relative;
-  width: 99.9%;
-  margin: 0 auto;
+  /*#region --LINE--*/
+  .line__wrapper {
+    position: relative;
+    width: 99.9%;
+    margin: 0 auto;
 
-}
-
-.wrapper {
-  position: absolute;
-  transform: rotate(3deg);
-  animation: scroll 30s linear infinite;
-  background: url("../images/frame1.gif") #f96739;
-  height: 40px;
-  min-width: 320px;
-  width: 100%;
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
-  background-size: auto 40px;
-  background-repeat: repeat-x;
-  z-index: 1;
-  overflow: hidden;
-}
-
-@keyframes scroll {
-  0% {
-    background-position: 400px 0px;
   }
-  100% {
-    background-position: -300px 0%;
-  }
-}
 
-/* Fallback if the operating system prefers reduced motion */
-@media (prefers-reduced-motion) {
   .wrapper {
-    animation: scroll 800s linear infinite;
-  }
-}
-
-.wrapper-2 {
-  position: absolute;
-  transform: rotate(-3deg);
-  animation: scroll-2 30s linear infinite;
-  background: url("../images/frame2.gif") #f8ba3b;
-  height: 40px;
-  min-width: 320px;
-  width: 100%;
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
-  background-size: auto 40px;
-  background-repeat: repeat-x;
+    position: absolute;
+    transform: rotate(3deg);
+    animation: scroll 30s linear infinite;
+    background: url("../images/frame1.gif") #f96739;
+    height: 40px;
+    min-width: 320px;
+    width: 100%;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    background-size: auto 40px;
+    background-repeat: repeat-x;
+    z-index: 1;
     overflow: hidden;
-}
-
-@keyframes scroll-2 {
-  0% {
-    background-position: -400px 0px;
   }
-  100% {
-    background-position: 300px 0%;
+
+  @keyframes scroll {
+    0% {
+      background-position: 0px 0px;
+    }
+
+    100% {
+      background-position: -8444px 0%;
+    }
   }
-}
 
-/* Fallback if the operating system prefers reduced motion */
-@media (prefers-reduced-motion) {
-  .wrapper {
-    animation: scroll-2 800s linear infinite;
+  .wrapper-2 {
+    position: absolute;
+    transform: rotate(-3deg);
+    animation: scroll-2 30s linear infinite;
+    background: url("../images/frame2.gif") #f8ba3b;
+    height: 40px;
+    min-width: 320px;
+    width: 100%;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    background-size: auto 40px;
+    background-repeat: repeat-x;
+    overflow: hidden;
   }
-}
-		/*#endregion ---LINE---*/
 
+  @keyframes scroll-2 {
+    0% {
+      background-position: 0px 0px;
+    }
 
-
-
-
-
- 
+    100% {
+      background-position: 8432px 0%;
+    }
+  }
+  /*#endregion ---LINE---*/
