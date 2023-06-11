@@ -634,13 +634,13 @@
 
   /*#endregion ---LINE---*/
 
-
+  /*#region --ADVANTAGES--*/
 
   .advantages {
     background: rgba(248, 186, 59, 0.1);
 
   }
- 
+
   .advantages__title {
     font-size: 36px;
     line-height: 1.21;
@@ -689,9 +689,10 @@
 
   .advantages__icon-wrapper {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
-    width: fit-content;
+    width: 100px;
+    height: 100px;
     background: rgba(248, 186, 59, 0.3);
     padding: 23px;
     border-radius: 50%;
@@ -717,6 +718,127 @@
   }
 
   .advantages__description {
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /*#endregion ---ADVANTAGES---*/
+
+
+
+
+  /* ///// */
+
+  .target__target-wrapper {
+    @media (min-width: 1400px) {
+      display: flex;
+    }
+  }
+
+  .target__img-wrapper {
+    display: block;
+    margin-bottom: 30px;
+
+    @media (min-width: 1400px) {
+      margin: 0;
+      display: flex;
+      flex-shrink: 0;
+      align-items: stretch;
+    }
+  }
+
+  .target__img {
+    background: url(../images/target-bg.svg) left bottom no-repeat;
+    background-size: 50%;
+    flex-shrink: 0;
+
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+
+    @media (min-width: 1400px) {
+      width: 100%;
+    }
+  }
+
+
+
+  .target__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .target__target-title {
+    font-size: 36px;
+    line-height: 1.21;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (min-width: 768px) {
+      font-size: 42px;
+    }
+
+    @media (min-width: 1400px) {
+      font-size: 56px;
+      margin-bottom: 56px;
+    }
+  }
+
+  .target__target-title-span {
+    position: relative;
+  }
+
+  .target__target-title-span::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(100%, -20%);
+    content: "";
+    display: block;
+    background: url(../images/three-line.png);
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+
+    @media (min-width: 1400px) {
+      width: 53px;
+      height: 55px;
+    }
+  }
+
+  .target__target-subtitle::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/checkb-button.png);
+    background-size: cover;
+
+    @media (min-width: 768px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .target__target-subtitle {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.21;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  .target__target-description {
     line-height: 1.5;
     text-align: center;
   }
